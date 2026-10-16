@@ -1,18 +1,576 @@
-const DEFAULT_DATA={"settings":{"businessName":"Shalni Aluminium House","whatsapp":"8210580737","address":"Station Road, Raghopur Simrahi Bazar, Bihar","heroEyebrow":"uPVC • ALUMINIUM • GLASS • DOORS • WINDOWS","heroTitle":"Modern Doors & Windows for Your Home","heroText":"Choose your product and send your requirement directly on WhatsApp.","heroImage":"images/upvc-window.jpg"},"products":[{"id":"upvc-sliding-window","cat":"uPVC","name":"uPVC Sliding Window","text":"2 Track uPVC sliding window","rate":0,"image":"images/upvc-window.jpg"},{"id":"upvc-2-track-window","cat":"uPVC","name":"uPVC 2-Track Window","text":"2-track sliding window","rate":0,"image":""},{"id":"upvc-3-track-window","cat":"uPVC","name":"uPVC 3-Track Window","text":"3-track sliding window","rate":0,"image":""},{"id":"upvc-4-track-window","cat":"uPVC","name":"uPVC 4-Track Window","text":"4-track sliding window","rate":0,"image":""},{"id":"upvc-fixed-window","cat":"uPVC","name":"uPVC Fixed Window","text":"Fixed glass uPVC window","rate":0,"image":""},{"id":"upvc-casement-window","cat":"uPVC","name":"uPVC Casement Window","text":"Side-hung casement window","rate":0,"image":""},{"id":"upvc-top-hung-window","cat":"uPVC","name":"uPVC Top Hung Window","text":"Top-hung opening window","rate":0,"image":""},{"id":"upvc-combination-window","cat":"uPVC","name":"uPVC Combination Window","text":"Fixed + sliding combination","rate":0,"image":""},{"id":"upvc-sliding-door","cat":"uPVC","name":"uPVC Sliding Door","text":"Sliding uPVC door","rate":0,"image":""},{"id":"upvc-casement-door","cat":"uPVC","name":"uPVC Casement Door","text":"Casement uPVC door","rate":0,"image":"images/upvc-door.jpg"},{"id":"upvc-french-door","cat":"uPVC","name":"uPVC French Door","text":"French-style uPVC door","rate":0,"image":""},{"id":"upvc-panel-door","cat":"uPVC","name":"uPVC Panel Door","text":"Panel-style uPVC door","rate":0,"image":""},{"id":"upvc-glass-door","cat":"uPVC","name":"uPVC Glass Door","text":"Full/large glass uPVC door","rate":0,"image":""},{"id":"upvc-bathroom-door","cat":"uPVC","name":"uPVC Bathroom Door","text":"uPVC bathroom/toilet door","rate":0,"image":""},{"id":"upvc-balcony-door","cat":"uPVC","name":"uPVC Balcony Door","text":"uPVC balcony door","rate":0,"image":""},{"id":"upvc-tilt-turn-window","cat":"uPVC","name":"uPVC Tilt & Turn Window","text":"Tilt and turn uPVC window","rate":0,"image":""},{"id":"upvc-ventilator","cat":"uPVC","name":"uPVC Ventilator","text":"uPVC ventilator","rate":0,"image":""},{"id":"upvc-arch-window","cat":"uPVC","name":"uPVC Arch Window","text":"Arch-top uPVC window","rate":0,"image":""},{"id":"upvc-bay-window","cat":"uPVC","name":"uPVC Bay Window","text":"Bay-style uPVC window","rate":0,"image":""},{"id":"upvc-mosquito-net-window","cat":"uPVC","name":"uPVC Mosquito Net Window","text":"uPVC window with mosquito net","rate":0,"image":""},{"id":"aluminium-sliding-window","cat":"Aluminium","name":"Aluminium Sliding Window","text":"Aluminium sliding window","rate":0,"image":""},{"id":"aluminium-2-track-window","cat":"Aluminium","name":"Aluminium 2-Track Window","text":"2-track aluminium sliding window","rate":0,"image":""},{"id":"aluminium-3-track-window","cat":"Aluminium","name":"Aluminium 3-Track Window","text":"3-track aluminium sliding window","rate":0,"image":""},{"id":"aluminium-4-track-window","cat":"Aluminium","name":"Aluminium 4-Track Window","text":"4-track aluminium sliding window","rate":0,"image":""},{"id":"aluminium-fixed-window","cat":"Aluminium","name":"Aluminium Fixed Window","text":"Fixed aluminium glass window","rate":0,"image":""},{"id":"aluminium-casement-window","cat":"Aluminium","name":"Aluminium Casement Window","text":"Aluminium casement window","rate":0,"image":""},{"id":"aluminium-top-hung-window","cat":"Aluminium","name":"Aluminium Top Hung Window","text":"Top-hung aluminium window","rate":0,"image":""},{"id":"aluminium-combination-window","cat":"Aluminium","name":"Aluminium Combination Window","text":"Fixed + sliding combination","rate":0,"image":""},{"id":"aluminium-sliding-door","cat":"Aluminium","name":"Aluminium Sliding Door","text":"Aluminium sliding door","rate":0,"image":""},{"id":"aluminium-single-door","cat":"Aluminium","name":"Aluminium Single Door","text":"Single-leaf aluminium door","rate":0,"image":""},{"id":"aluminium-double-door","cat":"Aluminium","name":"Aluminium Double Door","text":"Double-leaf aluminium door","rate":0,"image":""},{"id":"aluminium-french-door","cat":"Aluminium","name":"Aluminium French Door","text":"French-style aluminium door","rate":0,"image":""},{"id":"aluminium-glass-door","cat":"Aluminium","name":"Aluminium Glass Door","text":"Aluminium frame glass door","rate":0,"image":""},{"id":"aluminium-panel-door","cat":"Aluminium","name":"Aluminium Panel Door","text":"Panel-style aluminium door","rate":0,"image":""},{"id":"aluminium-bathroom-door","cat":"Aluminium","name":"Aluminium Bathroom Door","text":"Aluminium bathroom/toilet door","rate":0,"image":""},{"id":"aluminium-balcony-door","cat":"Aluminium","name":"Aluminium Balcony Door","text":"Aluminium balcony door","rate":0,"image":""},{"id":"aluminium-partition-door","cat":"Aluminium","name":"Aluminium Partition Door","text":"Aluminium partition door","rate":0,"image":""},{"id":"aluminium-office-partition","cat":"Aluminium","name":"Aluminium Office Partition","text":"Aluminium office partition","rate":0,"image":""},{"id":"aluminium-shop-front","cat":"Aluminium","name":"Aluminium Shop Front","text":"Aluminium shop-front system","rate":0,"image":""},{"id":"aluminium-ventilator","cat":"Aluminium","name":"Aluminium Ventilator","text":"Aluminium ventilator","rate":0,"image":""},{"id":"aluminium-louvers","cat":"Aluminium","name":"Aluminium Louvers","text":"Aluminium louver window/vent","rate":0,"image":""},{"id":"aluminium-arch-window","cat":"Aluminium","name":"Aluminium Arch Window","text":"Arch-top aluminium window","rate":0,"image":""},{"id":"aluminium-bay-window","cat":"Aluminium","name":"Aluminium Bay Window","text":"Bay-style aluminium window","rate":0,"image":""},{"id":"aluminium-sliding-folding-door","cat":"Aluminium","name":"Aluminium Sliding Folding Door","text":"Sliding-folding aluminium door","rate":0,"image":""},{"id":"aluminium-bi-fold-door","cat":"Aluminium","name":"Aluminium Bi-Fold Door","text":"Bi-fold aluminium door","rate":0,"image":""},{"id":"aluminium-heavy-door","cat":"Aluminium","name":"Aluminium Heavy Door","text":"Heavy-duty aluminium door","rate":0,"image":""},{"id":"aluminium-railing","cat":"Aluminium","name":"Aluminium Railing","text":"Aluminium railing","rate":0,"image":""},{"id":"glass-partition","cat":"Other","name":"Glass Partition","text":"Glass office/room partition","rate":0,"image":""},{"id":"toughened-glass-door","cat":"Other","name":"Toughened Glass Door","text":"Toughened glass door","rate":0,"image":""},{"id":"glass-window","cat":"Other","name":"Glass Window","text":"Glass window work","rate":0,"image":""},{"id":"acp-cladding","cat":"Other","name":"ACP Cladding","text":"ACP cladding work","rate":0,"image":""},{"id":"aluminium-composite-panel-work","cat":"Other","name":"Aluminium Composite Panel Work","text":"ACP fabrication and fitting","rate":0,"image":""},{"id":"mosquito-net-jali","cat":"Other","name":"Mosquito Net / Jali","text":"Mosquito net/jali","rate":0,"image":""},{"id":"sliding-mosquito-net","cat":"Other","name":"Sliding Mosquito Net","text":"Sliding mosquito mesh","rate":0,"image":""},{"id":"pleated-mosquito-net","cat":"Other","name":"Pleated Mosquito Net","text":"Pleated mosquito mesh","rate":0,"image":""},{"id":"ss-aluminium-railing","cat":"Other","name":"SS / Aluminium Railing","text":"Railing work","rate":0,"image":""},{"id":"shower-box","cat":"Other","name":"Shower Box","text":"Glass shower box","rate":0,"image":""},{"id":"glass-canopy","cat":"Other","name":"Glass Canopy","text":"Glass canopy work","rate":0,"image":""},{"id":"aluminium-canopy","cat":"Other","name":"Aluminium Canopy","text":"Aluminium canopy work","rate":0,"image":""},{"id":"kitchen-aluminium-cabinet","cat":"Other","name":"Kitchen Aluminium Cabinet","text":"Aluminium kitchen cabinet","rate":0,"image":""},{"id":"aluminium-almirah","cat":"Other","name":"Aluminium Almirah","text":"Aluminium almirah","rate":0,"image":""}]};
-let data=JSON.parse(localStorage.getItem("shalniData")||"null")||DEFAULT_DATA;
-let selected=null;
-function save(){localStorage.setItem("shalniData",JSON.stringify(data))}
-function wa(){return "https://wa.me/91"+data.settings.inquiry.replace(/\D/g,"")}
-function render(){
-document.getElementById("brand").textContent=data.settings.businessName; document.getElementById("logo").src=data.settings.logo||"images/shop-logo.png"; document.getElementById("heroEyebrow").textContent=data.settings.heroEyebrow;document.getElementById("heroTitle").textContent=data.settings.heroTitle;document.getElementById("heroText").textContent=data.settings.heroText;document.getElementById("heroImage").src=data.settings.heroImage||"images/upvc-window.jpg";document.getElementById("contactName").textContent=data.settings.businessName;document.getElementById("contactAddress").textContent=data.settings.address;document.getElementById("footerName").textContent=data.settings.businessName;
-let p=document.getElementById("phoneLink");p.textContent=data.settings.phone;p.href="tel:+91"+data.settings.phone.replace(/\D/g,"");let iq=document.getElementById("inquiryLink");iq.textContent=data.settings.inquiry;iq.href="tel:+91"+data.settings.inquiry.replace(/\D/g,"");document.getElementById("heroWhatsApp").href=wa()+"?text="+encodeURIComponent("Hello "+data.settings.businessName+", I want a door/window quotation.");document.getElementById("contactWhatsApp").href=wa()+"?text="+encodeURIComponent("Hello "+data.settings.businessName);
-let cats=["All",...new Set(data.products.map(x=>x.cat))];document.getElementById("filters").innerHTML=cats.map((c,i)=>`<button class="filter-btn ${i===0?"active":""}" onclick="filterProducts('${c}',this)">${c}</button>`).join("");
-renderProducts("All");document.getElementById("year").textContent=new Date().getFullYear();
+let data = JSON.parse(localStorage.getItem("shalniData") || "null") || DEFAULT_DATA;
+
+let selected = null;
+
+
+// ===============================
+// OLD DATA FIX / DEFAULT SETTINGS
+// ===============================
+
+if (!data.settings) {
+    data.settings = {};
 }
-function renderProducts(cat){document.getElementById("productGrid").innerHTML=data.products.filter(x=>cat==="All"||x.cat===cat).map(x=>`<article class="product-card"><div>${x.image?`<img src="${x.image}" alt="${x.name}">`:`<div class="placeholder">${x.name.toUpperCase()}</div>`}</div><div class="product-body"><span class="tag">${x.cat}</span><h3>${x.name}</h3><p>${x.text}</p><button class="small-btn" onclick="openQuote('${x.id}')">Select Product</button></div></article>`).join("")}
-function filterProducts(cat,btn){document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");renderProducts(cat)}
-function openQuote(id){selected=data.products.find(x=>x.id===id)||data.products[0];document.getElementById("modalProduct").textContent=selected.name;document.getElementById("qWidth").value=4;document.getElementById("qHeight").value=5;document.getElementById("qQty").value=1;document.getElementById("quoteModal").classList.add("show");calcQuote()}
-function closeQuote(){document.getElementById("quoteModal").classList.remove("show")}
-function calcQuote(){let a=(+qWidth.value||0)*(+qHeight.value||0),q=+qQty.value||1; qArea.textContent=(a).toFixed(2)+" sq.ft.";qPrice.textContent="₹"+(a*q*selected.rate).toLocaleString("en-IN")+" approx."}
-function sendQuote(){let w=+qWidth.value||0,h=+qHeight.value||0,q=+qQty.value||1,a=w*h,total=a*q*selected.rate;let msg=`Hello ${data.settings.businessName},%0A%0AProduct: ${selected.name}%0ASize: ${w} ft × ${h} ft%0AArea: ${a.toFixed(2)} sq.ft.%0AQuantity: ${q}%0AOwner rate: ₹${selected.rate}/sq.ft.%0AEstimated amount: ₹${total.toLocaleString("en-IN")}%0A%0APlease confirm final quotation.`;window.open(wa()+"?text="+msg,"_blank")}
-[qWidth,qHeight,qQty].forEach(x=>x.addEventListener("input",calcQuote));function toggleMenu(){navMenu.classList.toggle("open")}render();
+
+if (!data.settings.businessName) {
+    data.settings.businessName = "Shalni uPVC Enterprises";
+}
+
+if (!data.settings.phone) {
+    data.settings.phone = data.settings.whatsapp || "8210580737";
+}
+
+if (!data.settings.inquiry) {
+    data.settings.inquiry = data.settings.whatsapp || "8210580737";
+}
+
+if (!data.settings.whatsapp) {
+    data.settings.whatsapp = data.settings.inquiry;
+}
+
+if (!data.settings.logo) {
+    data.settings.logo = "images/shop-logo.png";
+}
+
+
+// ===============================
+// SAVE DATA
+// ===============================
+
+function save() {
+    localStorage.setItem("shalniData", JSON.stringify(data));
+}
+
+
+// ===============================
+// WHATSAPP NUMBER
+// ===============================
+
+function getWhatsAppNumber() {
+
+    return (
+        data.settings.inquiry ||
+        data.settings.whatsapp ||
+        "8210580737"
+    ).replace(/\D/g, "");
+}
+
+
+function wa() {
+
+    return "https://wa.me/91" + getWhatsAppNumber();
+
+}
+
+
+// ===============================
+// WEBSITE RENDER
+// ===============================
+
+function render() {
+
+    document.getElementById("brand").textContent =
+        data.settings.businessName;
+
+    document.getElementById("logo").src =
+        data.settings.logo || "images/shop-logo.png";
+
+    document.getElementById("heroEyebrow").textContent =
+        data.settings.heroEyebrow;
+
+    document.getElementById("heroTitle").textContent =
+        data.settings.heroTitle;
+
+    document.getElementById("heroText").textContent =
+        data.settings.heroText;
+
+    document.getElementById("heroImage").src =
+        data.settings.heroImage || "images/upvc-window.jpg";
+
+    document.getElementById("contactName").textContent =
+        data.settings.businessName;
+
+    document.getElementById("contactAddress").textContent =
+        data.settings.address;
+
+
+    // CALL NUMBER
+
+    const phoneLink =
+        document.getElementById("phoneLink");
+
+    if (phoneLink) {
+
+        phoneLink.textContent =
+            data.settings.phone;
+
+        phoneLink.href =
+            "tel:+91" +
+            data.settings.phone.replace(/\D/g, "");
+
+    }
+
+
+    // ENQUIRY NUMBER
+
+    const inquiryLink =
+        document.getElementById("inquiryLink");
+
+    if (inquiryLink) {
+
+        inquiryLink.textContent =
+            data.settings.inquiry;
+
+        inquiryLink.href =
+            "tel:+91" +
+            data.settings.inquiry.replace(/\D/g, "");
+
+    }
+
+
+    // HERO WHATSAPP
+
+    document.getElementById("heroWhatsApp").href =
+        wa() +
+        "?text=" +
+        encodeURIComponent(
+            "Hello " +
+            data.settings.businessName +
+            ", I want a door/window quotation."
+        );
+
+
+    // CONTACT WHATSAPP
+
+    document.getElementById("contactWhatsApp").href =
+        wa() +
+        "?text=" +
+        encodeURIComponent(
+            "Hello " +
+            data.settings.businessName
+        );
+
+
+    // CATEGORY FILTER
+
+    const cats = [
+        "All",
+        ...new Set(
+            data.products.map(
+                product => product.cat
+            )
+        )
+    ];
+
+
+    document.getElementById("filters").innerHTML =
+        cats.map(
+            (category, index) => `
+
+            <button
+                class="filter-btn ${index === 0 ? "active" : ""}"
+                onclick="filterProducts('${category}',this)"
+            >
+                ${category}
+            </button>
+
+        `
+        ).join("");
+
+
+    renderProducts("All");
+
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+}
+
+
+// ===============================
+// PRODUCT DISPLAY
+// ===============================
+
+function renderProducts(category) {
+
+    const products =
+        data.products.filter(
+            product =>
+                category === "All" ||
+                product.cat === category
+        );
+
+
+    document.getElementById("productGrid").innerHTML =
+        products.map(product => `
+
+        <article class="product-card">
+
+            <div>
+
+                ${
+                    product.image
+
+                    ?
+
+                    `<img
+                        src="${product.image}"
+                        alt="${product.name}"
+                    >`
+
+                    :
+
+                    `<div class="placeholder">
+                        ${product.name.toUpperCase()}
+                    </div>`
+                }
+
+            </div>
+
+
+            <div class="product-body">
+
+                <span class="tag">
+                    ${product.cat}
+                </span>
+
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+
+                <p>
+                    ${product.text}
+                </p>
+
+
+                <button
+                    class="small-btn"
+                    onclick="openQuote('${product.id}')"
+                >
+                    Select Product
+                </button>
+
+            </div>
+
+        </article>
+
+    `).join("");
+
+}
+
+
+// ===============================
+// CATEGORY FILTER
+// ===============================
+
+function filterProducts(category, button) {
+
+    document
+        .querySelectorAll(".filter-btn")
+        .forEach(
+            btn =>
+                btn.classList.remove("active")
+        );
+
+
+    button.classList.add("active");
+
+
+    renderProducts(category);
+
+}
+
+
+// ===============================
+// OPEN QUOTATION
+// ===============================
+
+function openQuote(id) {
+
+    selected =
+        data.products.find(
+            product =>
+                product.id === id
+        );
+
+
+    if (!selected) {
+        return;
+    }
+
+
+    document.getElementById("modalProduct").textContent =
+        selected.name;
+
+
+    document.getElementById("qWidth").value = 4;
+
+    document.getElementById("qHeight").value = 5;
+
+    document.getElementById("qQty").value = 1;
+
+
+    document
+        .getElementById("quoteModal")
+        .classList.add("show");
+
+
+    calculateEstimate();
+
+}
+
+
+// ===============================
+// CLOSE QUOTATION
+// ===============================
+
+function closeQuote() {
+
+    document
+        .getElementById("quoteModal")
+        .classList.remove("show");
+
+}
+
+
+// ===============================
+// ⭐ FIXED ESTIMATE CALCULATOR
+// ===============================
+
+function calculateEstimate() {
+
+    if (!selected) {
+        return;
+    }
+
+
+    const width =
+        parseFloat(
+            document.getElementById("qWidth").value
+        ) || 0;
+
+
+    const height =
+        parseFloat(
+            document.getElementById("qHeight").value
+        ) || 0;
+
+
+    const quantity =
+        parseInt(
+            document.getElementById("qQty").value
+        ) || 1;
+
+
+    // ADMIN PANEL RATE
+
+    const rate =
+        parseFloat(selected.rate) || 0;
+
+
+    // AREA OF ONE PRODUCT
+
+    const singleArea =
+        width * height;
+
+
+    // TOTAL AREA
+
+    const totalArea =
+        singleArea * quantity;
+
+
+    // TOTAL PRICE
+
+    const totalPrice =
+        totalArea * rate;
+
+
+    // SHOW AREA
+
+    document.getElementById("qArea").textContent =
+
+        singleArea.toFixed(2) +
+        " sq.ft. / item (" +
+        totalArea.toFixed(2) +
+        " total)";
+
+
+    // SHOW PRICE
+
+    if (rate > 0) {
+
+        document.getElementById("qPrice").textContent =
+
+            "₹" +
+            totalPrice.toLocaleString("en-IN") +
+            " approx.";
+
+    }
+
+    else {
+
+        document.getElementById("qPrice").textContent =
+            "Rate not set";
+
+    }
+
+}
+
+
+// ===============================
+// WHATSAPP QUOTATION
+// ===============================
+
+function sendQuote() {
+
+    if (!selected) {
+        return;
+    }
+
+
+    const width =
+        parseFloat(
+            document.getElementById("qWidth").value
+        ) || 0;
+
+
+    const height =
+        parseFloat(
+            document.getElementById("qHeight").value
+        ) || 0;
+
+
+    const quantity =
+        parseInt(
+            document.getElementById("qQty").value
+        ) || 1;
+
+
+    const rate =
+        parseFloat(selected.rate) || 0;
+
+
+    const singleArea =
+        width * height;
+
+
+    const totalArea =
+        singleArea * quantity;
+
+
+    const totalPrice =
+        totalArea * rate;
+
+
+    let message =
+
+        "Hello " +
+        data.settings.businessName +
+        ",\n\n" +
+
+        "Product: " +
+        selected.name +
+        "\n" +
+
+        "Size: " +
+        width +
+        " ft × " +
+        height +
+        " ft\n" +
+
+        "Area: " +
+        singleArea.toFixed(2) +
+        " sq.ft. / item\n" +
+
+        "Quantity: " +
+        quantity +
+        "\n" +
+
+        "Total Area: " +
+        totalArea.toFixed(2) +
+        " sq.ft.\n";
+
+
+    if (rate > 0) {
+
+        message +=
+
+            "Rate: ₹" +
+            rate.toLocaleString("en-IN") +
+            "/sq.ft.\n" +
+
+            "Estimated Amount: ₹" +
+            totalPrice.toLocaleString("en-IN") +
+            "\n";
+
+    }
+
+
+    message +=
+
+        "\nPlease confirm the final quotation.";
+
+
+    const whatsappURL =
+
+        wa() +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+// ===============================
+// ⭐ LIVE PRICE UPDATE
+// ===============================
+
+document
+    .getElementById("qWidth")
+    .addEventListener(
+        "input",
+        calculateEstimate
+    );
+
+
+document
+    .getElementById("qHeight")
+    .addEventListener(
+        "input",
+        calculateEstimate
+    );
+
+
+document
+    .getElementById("qQty")
+    .addEventListener(
+        "input",
+        calculateEstimate
+    );
+
+
+// ===============================
+// MOBILE MENU
+// ===============================
+
+function toggleMenu() {
+
+    document
+        .getElementById("navMenu")
+        .classList.toggle("open");
+
+}
+
+
+// ===============================
+// START WEBSITE
+// ===============================
+
+render();
